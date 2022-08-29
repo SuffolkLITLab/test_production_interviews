@@ -1,0 +1,29 @@
+{
+  "name": "test_production_interviews",
+  "version": "0.1.0",
+  "description": "Use ALKiln to test all interviews listed on the testing server to ensure they still function",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuffolkLITLab/test_production_interviews.git"
+  },
+  "keywords": [
+    "docassemble",
+    "alkiln",
+    "testing",
+    "organization"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SuffolkLITLab/test_production_interviews/issues"
+  },
+  "homepage": "https://github.com/SuffolkLITLab/test_production_interviews#readme",
+  "dependencies": {
+    "@cucumber/cucumber": "7.3.2",
+    "@suffolklitlab/alkiln": "^4.0.0"
+  }
+}
