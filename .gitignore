@@ -1,5 +1,6 @@
-# OS-specific files
+# OS- and app-specific files
 *DS_Store*
+.vscode/**
 
 # Dependency directories
 node_modules/
@@ -24,7 +25,6 @@ cucumber-report.*
 tests/chromedriver
 
 ### ALKiln testing
-.vscode/**
 # Files generated as artifacts/results of tests
 /_alkiln_test*
 /alkiln_test*
@@ -33,3 +33,5 @@ error*.jpg
 screenshot_*.jpg
 # Running report logs
 /debug_log.txt
+# Feature files that gets temporarily generated
+/*.feature

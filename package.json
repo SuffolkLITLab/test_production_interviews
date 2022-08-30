@@ -4,7 +4,11 @@
   "description": "Use ALKiln to test all interviews listed on the testing server to ensure they still function",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "npm run setup && npm run cucumber",
+    "local": "npm run cucumber",
+    "setup": "node ./lib/index.js",
+    "cucumber_base": "./node_modules/.bin/cucumber-js --require ./node_modules/@suffolklitlab/alkiln/lib/index.js",
+    "cucumber": "run_cucumber(){ npm run cucumber_base -- \"$@\" *.feature; }; run_cucumber"
   },
   "repository": {
     "type": "git",
@@ -24,6 +28,9 @@
   "homepage": "https://github.com/SuffolkLITLab/test_production_interviews#readme",
   "dependencies": {
     "@cucumber/cucumber": "7.3.2",
-    "@suffolklitlab/alkiln": "^4.0.0"
+    "@suffolklitlab/alkiln": "^4.0.0",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "fs": "^0.0.1-security"
   }
 }
