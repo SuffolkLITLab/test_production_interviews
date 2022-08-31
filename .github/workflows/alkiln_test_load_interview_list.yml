@@ -1,0 +1,26 @@
+name: All server interviews load
+
+on:
+  push:
+  workflow_dispatch:
+  # https://crontab.guru/once-a-day 12am
+  schedule:
+   - cron: '0 0 * * *'
+
+jobs:
+
+  test-testing-server-interviews:
+    runs-on: ubuntu-latest
+
+    env:
+      SERVER_URL: "${{ secrets.SERVER_URL }}"
+      DOCASSEMBLE_DEVELOPER_API_KEY: "${{ secrets.DOCASSEMBLE_DEVELOPER_API_KEY }}"
+
+    - name: Install node packages
+      uses: actions/setup-node@v1
+      with:
+        node-version: "17"
+    - run: npm install
+    - name: Load each testing server interview
+      run: npm run test
+    - run: echo "Finished running ALKiln tests"
