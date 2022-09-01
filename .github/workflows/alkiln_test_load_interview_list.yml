@@ -15,8 +15,8 @@ jobs:
     env:
       SERVER_URL: "${{ secrets.SERVER_URL }}"
       DOCASSEMBLE_DEVELOPER_API_KEY: "${{ secrets.DOCASSEMBLE_DEVELOPER_API_KEY }}"
-      REPO_URL: "${{ github.server_url }}/${{ github.repository }}"
-      BRANCH_PATH: "${{ github.ref }}"
+      REPO_URL: "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
+      BRANCH_PATH: "$GITHUB_REF"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
