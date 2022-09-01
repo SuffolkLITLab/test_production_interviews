@@ -4,8 +4,8 @@ on:
   push:
   workflow_dispatch:
   # https://crontab.guru/once-a-day 12am
-  #schedule:
-  # - cron: '0 0 * * *'
+  schedule:
+   - cron: '0 0 * * *'
 
 jobs:
 
