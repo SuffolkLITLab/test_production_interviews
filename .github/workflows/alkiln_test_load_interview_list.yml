@@ -16,6 +16,8 @@ jobs:
       SERVER_URL: "${{ secrets.SERVER_URL }}"
       DOCASSEMBLE_DEVELOPER_API_KEY: "${{ secrets.DOCASSEMBLE_DEVELOPER_API_KEY }}"
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Install node packages
         uses: actions/setup-node@v1
         with:
